@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../img/bgStar.gif') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #77BBDD;
+    overflow: hidden; 
+    width: 100vw; 
+    height: 100vh; 
+    color: #77BBDD;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+
+
+.welcome-container, .nav-container, .subpage-container {
+    text-align: center;
+    padding: 50px;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #6a5acd, #00bfff);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #00bfff, #6a5acd);
+    transform: scale(1.05);
+}
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #77BBDD;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: #77BBDD;
+}
+
+#welcome-img {
+    width: 100%;
+    max-width: 600px;
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+    animation: sparkle 2s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 2s forwards;
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-container ul li {
+    margin: 5px;
+}
+
+.nav-container ul li button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.nav-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-container ul li {
+    margin: 5px;
+}
+
+.nav-container ul li button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #6a5acd, #00bfff);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-container ul li button:hover {
+    background: linear-gradient(45deg, #00bfff, #6a5acd);
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in-visible {
+    opacity: 1;
+}
+
+/* 图片相关的样式 */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 1s ease-in-out;
+}
+
+.image-container.fade-in-visible {
+    opacity: 1; /* 加入fade-in-visible类时设置透明度为1 */
+}
+
+.image-container a {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 150px;
+    height: 100px;
+    transition: opacity 0.5s ease;
+}
+
+.image-container a:hover img {
+    opacity: 0.3;
+}
+
+.image-container a:hover .desc {
+    opacity: 1;
+}
+
+.desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.image-container .image-wrapper:nth-child(4),
+.image-container .image-wrapper:nth-child(5) {
+    grid-column: span 2;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* 根据需要调整 */
+    object-fit: cover;
+}
+
+.image-container .desc {
+    text-align: center;
+    margin-top: 5px;
+}
+

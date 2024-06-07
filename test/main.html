@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航页</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px; /* 图片之间的间距 */
+        }
+        .image-wrapper {
+            flex: 1 1 calc(20% - 16px); /* 使图片宽度自适应，并减去间距 */
+            box-sizing: border-box;
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .desc {
+            text-align: center;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container fade-in">
+        <h1 class="fade-in">导航页</h1>
+        <ul class="fade-in">
+            <li><button class="fade-in" onclick="ToPG1()">企划起源</button></li>
+            <li><button class="fade-in" onclick="ToPG2()">剧情简介</button></li>
+            <li><button class="fade-in" onclick="ToPG3()">主要角色</button></li>
+            <li><button class="fade-in" onclick="ToPG4()">声优简介</button></li>
+            <li><button class="fade-in" onclick="ToPG5()">原创歌曲</button></li>
+            <li><button class="fade-in" onclick="ToPG6()">线下LIVE</button></li>
+            <li><button class="fade-in" onclick="ToPG7()">在线观影</button></li>
+            <li><button class="fade-in" onclick="ToPG8()">制作团队</button></li>
+            <li><button class="fade-in" onclick="ToHome()">返回主页</button></li>
+        </ul>
+    </div>
+    <div class="image-container fade-in">
+        <div class="image-wrapper">
+            <a href="subpage/subpage3.html">
+                <img src="img/anon.gif" sizes="any" alt="Image 1">
+                <div class="desc">图片1介绍文字</div>
+            </a>
+        </div>
+        <div class="image-wrapper">
+            <a href="subpage/subpage3.html">
+                <img src="img/soyo.gif" alt="Image 2">
+                <div class="desc">图片2介绍文字</div>
+            </a>
+        </div>
+        <div class="image-wrapper">
+            <a href="subpage/subpage3.html">
+                <img src="img/tomori.gif" alt="Image 3">
+                <div class="desc">图片3介绍文字</div>
+            </a>
+        </div>
+        <div class="image-wrapper">
+            <a href="subpage/subpage3.html">
+                <img src="img/taki.gif" alt="Image 4">
+                <div class="desc">图片4介绍文字</div>
+            </a>
+        </div>
+        <div class="image-wrapper">
+            <a href="subpage/subpage3.html">
+                <img src="img/cat.gif" alt="Image 5">
+                <div class="desc">图片5介绍文字</div>
+            </a>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
